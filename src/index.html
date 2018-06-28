@@ -1,14 +1,207 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>BootstrapLearning</title>
-  <base href="/">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bootstarp Tutorial</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+
+  <style>
+    .container {
+      margin-top: 25px;
+    }
+
+    .btn-autosize {
+      padding: 1px 5px;
+      font-size: 12px;
+      line-height: 1.5;
+      border-radius: 3px;
+    }
+
+    .vl {
+      display: none;
+    }
+
+    @media screen and (min-width: 768px) {
+      .btn-autosize {
+        padding: 5px 10px;
+        font-size: 12px;
+        line-height: 1.5;
+        border-radius: 3px;
+      }
+      .vl {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 800px) {
+
+      .carousel {
+
+        display: none;
+      }
+    }
+
+    @media screen and (min-width: 992px) {
+      .btn-autosize {
+        padding: 10px 16px;
+        font-size: 18px;
+        line-height: 1.33;
+        border-radius: 6px;
+      }
+      .vl {
+        display: none;
+      }
+    }
+
+    @media screen and (min-width: 1292px) {
+      .btn-autosize {
+        padding: 10px 16px;
+        font-size: 34px;
+        line-height: 1.33;
+        border-radius: 6px;
+      }
+      .vl {
+        display: block;
+      }
+    }
+
+
+    .jumbotron {
+      background-color: #2E2D88;
+      color: white;
+    }
+
+    .tab-content {
+      border-left: 1px solid #ddd;
+      border-right: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      padding: 10px;
+
+    }
+
+    .nav-tabs {
+      margin-bottom: 0;
+    }
+
+    hr.style-two {
+      height: 30px;
+      border-style: solid;
+      border-color: white;
+      border-width: 1px 0 0 0;
+      border-radius: 20px;
+    }
+
+    hr.style-three {
+      display: block;
+      content: "";
+      height: 30px;
+      margin-top: -31px;
+      border-style: solid;
+      border-color: white;
+      border-width: 0 0 1px 0;
+      border-radius: 20px;
+      margin-top: 10px;
+    }
+
+    button {
+      margin: 10px;
+    }
+
+    div.vl {
+      border-left: 1px dashed;
+      height: 500px;
+
+
+      top: 0;
+    }
+
+    #overlay {
+      position: fixed;
+      /* Sit on top of the page content */
+      display: block;
+      /* Hidden by default */
+      top: 40%;
+      left: 40%;
+
+      background-color: rgba(0, 0, 0, 0.5);
+      /* Black background with opacity */
+      z-index: 2;
+      /* Specify a stack order in case you're using a different order for other elements */
+      cursor: pointer;
+      /* Add a pointer on hover */
+    }
+
+
+    /* The device with borders */
+
+    .smartphone {
+      position: relative;
+      width: 360px;
+      height: 640px;
+      margin: auto;
+      border: 16px black solid;
+      border-top-width: 60px;
+      border-bottom-width: 60px;
+      border-radius: 36px;
+    }
+
+    /* The horizontal line on the top of the device */
+
+    .smartphone:before {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 5px;
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #333;
+      border-radius: 10px;
+    }
+
+    /* The circle on the bottom of the device */
+
+    .smartphone:after {
+      content: '';
+      display: block;
+      width: 35px;
+      height: 35px;
+      position: absolute;
+      left: 50%;
+      bottom: -65px;
+      transform: translate(-50%, -50%);
+      background: #333;
+      border-radius: 50%;
+    }
+
+    /* The screen (or content) of the device */
+
+    .smartphone .content {
+      width: 360px;
+      height: 640px;
+      background: white;
+    }
+  </style>
+
 </head>
+
 <body>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
   <app-root></app-root>
 </body>
+
 </html>
